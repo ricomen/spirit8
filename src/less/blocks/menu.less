@@ -1,0 +1,33 @@
+.menu {
+  font-family: @Lato;
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+  }//list
+  &__item {    
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 23px;
+    font-size: 14px;
+    line-height: 1;
+
+    &--active::after
+     {
+      position: absolute;
+      content: '';
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 3px;
+      background-image: linear-gradient(to right, @orange 50% 0, @orange 50%, #292929 50%, #292929 100%);
+    }
+    a {
+      color: inherit;
+    }
+  }//item
+}
