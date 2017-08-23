@@ -157,16 +157,21 @@
           button(type="submit").btn.btn--submit
   footer.page-footer
     .container
-      .page-footer__copyright All rights reserved. copyright © 2014 spirit8
-    .page-footer__social.social
-      ul.social__list
-        li.social__item
-          a(href="javascript:void(0)") Facebook
-        li.social__item
-          a(href="javascript:void(0)") Twitter
-        li.social__item
-          a(href="javascript:void(0)") Google plus
-        li.social__item
-          a(href="javascript:void(0)") Linkedin
-        li.social__item
-          a(href="javascript:void(0)") Dribble
+      .page-footer__copyright All rights reserved. copyright © 2014 <b>spirit8</b>
+      .page-footer__social.social
+        ul.social__list
+          li.social__item
+            a(href="javascript:void(0)") Facebook
+              +icon("facebook", 30, 30)
+          li.social__item
+            a(href="javascript:void(0)") Twitter
+              +icon("twitter", 30, 30)
+          li.social__item
+            a(href="javascript:void(0)") Google plus
+              +icon("gplus", 30, 30)
+          li.social__item
+            a(href="javascript:void(0)") Linkedin
+              +icon("linkedin", 30, 30)
+          li.social__item
+            a(href="javascript:void(0)") Dribble
+              +icon("dribble", 30, 30)
