@@ -2,20 +2,21 @@ header.page-header#home
   .container
     .page-header__top
       a.page-header__logo(href="/") Spirit8
-      nav.menu
-      ul.menu__list
-        li.menu__item
-          a(href="#home" rel='m_PageScroll2id') Home
-        li.menu__item
-          a(href="#about" rel='m_PageScroll2id') About
-        li.menu__item
-          a(href="#services" rel='m_PageScroll2id') Services
-        li.menu__item
-          a(href="#portfolio" rel='m_PageScroll2id') Portfolio
-        li.menu__item
-          a(href="#testimonials" rel='m_PageScroll2id') Testimonials
-        li.menu__item
-          a(href="#contact" rel='m_PageScroll2id') Contact
+      nav.menu.menu--closed
+        button.menu__trigger(type="button")          
+        ul.menu__list
+          li.menu__item
+            a(href="#home" rel='m_PageScroll2id') Home
+          li.menu__item
+            a(href="#about" rel='m_PageScroll2id') About
+          li.menu__item
+            a(href="#services" rel='m_PageScroll2id') Services
+          li.menu__item
+            a(href="#portfolio" rel='m_PageScroll2id') Portfolio
+          li.menu__item
+            a(href="#testimonials" rel='m_PageScroll2id') Testimonials
+          li.menu__item
+            a(href="#contact" rel='m_PageScroll2id') Contact
 
     .page-header__body
       h1.page-header__title Welcome on <span>Spirit8</span>

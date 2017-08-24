@@ -84,8 +84,6 @@ var _mixitup2 = _interopRequireDefault(_mixitup);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 /**
  *  svg
  */
@@ -129,8 +127,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true
+          slidesToScroll: 3
         }
       }, {
         breakpoint: 600,
@@ -143,8 +140,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: false,
-          arrows: true
+          dots: false
         }
       }]
     });
@@ -162,8 +158,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true
+          slidesToScroll: 3
         }
       }, {
         breakpoint: 600,
@@ -175,9 +170,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: false,
-          arrows: true
+          slidesToScroll: 1
         }
       }]
     });
@@ -196,19 +189,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /**
      *  sort '.works__list'
      */
-
     var works = document.querySelector('#works__list');
-
-    var mixerConfig = _defineProperty({
-      animation: {
-        enable: false
-      },
-      selectors: {
-        target: '.works__item'
-      }
-    }, 'selectors', {
-      target: '.item'
-    });
 
     var mixer = (0, _mixitup2.default)(works, {
       animation: {
@@ -217,7 +198,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       selectors: {
         target: '.works__item'
       }
+    });
 
+    /*
+    * menu mobile toggler
+    **/
+
+    $('.menu__trigger').on('click', function () {
+      $(this).toggleClass('menu__trigger--closed');
+      $(this).closest('.menu').toggleClass('menu--closed');
     });
   });
 })(jQuery);

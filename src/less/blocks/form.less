@@ -1,3 +1,59 @@
 .form {
-  
+  .center;
+  max-width: 750px;
+  text-align: left;
+  sup {
+    color: #db0000;
+  }
+
+  &__input {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 4%;
+    font-size: 14px;
+    line-height: 1.1;
+    width: 48%;
+    &:last-child {
+      margin-right: 0;
+    }
+    label {
+      margin-bottom: 8px;
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    input {
+      display: block;
+      padding: 12px;
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid #999;
+      border-radius: 2px;
+
+    }
+  }//input
+
+  &__textarea {
+    font-size: 14px;
+    label {
+      display: block;
+      margin-bottom: 8px;
+      width: 100%;
+    }
+    textarea {
+      padding: 10px;
+      min-height: 165px;
+      resize: none;
+      width: 100%;
+      border: 1px solid #999;
+      border-radius: 2px;
+      box-sizing: border-box;
+    }
+  }
+
+  &__row {   
+  margin-bottom: 25px;
+  box-sizing: border-box;
+  font-size: 0;
+  }
 }

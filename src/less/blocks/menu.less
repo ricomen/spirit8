@@ -1,12 +1,71 @@
-.menu {
+.menu {  
   font-family: @Lato;
+  &--closed &__list {
+    @media @tablet {
+      display: none;
+    }
+  }
   &__list {
     margin: 0;
     padding: 0;
     list-style: none;
-
+    @media @tablet {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100px;
+    }
   }//list
-  &__item {    
+
+  &__trigger {
+    position: relative;
+    cursor: pointer;
+    display: none;
+    cursor: pointer;
+    vertical-align: middle; 
+    height: 20px;
+    width: 20px;    
+    text-align: center;    
+    box-sizing: border-box;
+    background: transparent;
+    border: none;    
+    @media @tablet {
+      display: block; 
+    }
+    &::before,
+    &::after {
+      transition: 0.25s ease-in;
+      position: absolute;
+      content: "";    
+      left: 0px;
+      width: 20px;         
+      height: 3px;
+      background-color: #fff;    
+    }
+    &::before {
+      top: 0;      
+      box-shadow: 0 8.5px #fff;
+    }
+    &::after {
+      bottom: 0;
+    }
+    &--closed {
+      &::before,
+      &::after {
+        top: 8px;
+        left: 0;
+        height: 3px;
+      }
+      &::before {
+        transform: rotate(45deg);
+        box-shadow: 0 0 #fff;
+      }
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &__item {
     display: inline-block;
     vertical-align: middle;
     position: relative;
@@ -18,15 +77,28 @@
     font-size: 14px;
     line-height: 1;
     text-transform: uppercase;
-    &--active::after
-     {
+    @media @tablet {
+      display: block;
+      margin: 0;
+      padding: 10px 0;
+      text-align: center;
+    }
+    &::after {
       position: absolute;
       content: '';
       left: 0;
       right: 0;
       bottom: 0;
       height: 3px;
-      background-image: linear-gradient(to right, @orange 50% 0, @orange 50%, #292929 50%, #292929 100%);
+      transition: 0.5s ease-in-out;      
+      opacity: 0;
+      @media @tablet {
+        display: none;
+      }
+    }
+    &:hover::after {
+      opacity:1;
+      background: linear-gradient(to right, @orange 50% 0, @orange 50%, #292929 50%, #292929 100%);
     }
     a {
       color: inherit;

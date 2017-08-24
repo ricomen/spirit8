@@ -13,15 +13,17 @@
       <header class="page-header" id="home">
         <div class="container">
           <div class="page-header__top"><a class="page-header__logo" href="/">Spirit8</a>
-            <nav class="menu"></nav>
-            <ul class="menu__list">
-              <li class="menu__item"><a href="#home" rel="m_PageScroll2id">Home</a></li>
-              <li class="menu__item"><a href="#about" rel="m_PageScroll2id">About</a></li>
-              <li class="menu__item"><a href="#services" rel="m_PageScroll2id">Services</a></li>
-              <li class="menu__item"><a href="#portfolio" rel="m_PageScroll2id">Portfolio</a></li>
-              <li class="menu__item"><a href="#testimonials" rel="m_PageScroll2id">Testimonials</a></li>
-              <li class="menu__item"><a href="#contact" rel="m_PageScroll2id">Contact</a></li>
-            </ul>
+            <nav class="menu menu--closed">
+              <button class="menu__trigger" type="button">         </button>
+              <ul class="menu__list">
+                <li class="menu__item"><a href="#home" rel="m_PageScroll2id">Home</a></li>
+                <li class="menu__item"><a href="#about" rel="m_PageScroll2id">About</a></li>
+                <li class="menu__item"><a href="#services" rel="m_PageScroll2id">Services</a></li>
+                <li class="menu__item"><a href="#portfolio" rel="m_PageScroll2id">Portfolio</a></li>
+                <li class="menu__item"><a href="#testimonials" rel="m_PageScroll2id">Testimonials</a></li>
+                <li class="menu__item"><a href="#contact" rel="m_PageScroll2id">Contact</a></li>
+              </ul>
+            </nav>
           </div>
           <div class="page-header__body">
             <h1 class="page-header__title">Welcome on <span>Spirit8</span></h1>
@@ -288,15 +290,15 @@
             <div class="testimonials__slider">
               <div class="testimonials__slider-item">
                 <p class="testimonials__text">This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-                <address>Dean Martin, CEO Acme Inc.</address>
+                <div class="testimonials__author">Dean Martin, <span>CEO Acme Inc.</span></div>
               </div>
               <div class="testimonials__slider-item">
                 <p class="testimonials__text">This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-                <address>Dean Martin, CEO Acme Inc.</address>
+                <div class="testimonials__author">Dean Martin, <span>CEO Acme Inc.</span></div>
               </div>
               <div class="testimonials__slider-item">
                 <p class="testimonials__text">This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-                <address>Dean Martin, CEO Acme Inc.</address>
+                <div class="testimonials__author">Dean Martin, <span>CEO Acme Inc.</span></div>
               </div>
             </div>
           </div>
@@ -304,26 +306,26 @@
         <section class="contact" id="contact">
           <div class="container">
             <h2 class="contact__title">Feel free to <b>contact us</b></h2>
-            <div class="contact__descr"></div>
+            <div class="contact__descr">Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. </div>
             <form class="form" name="contact">
               <div class="form__row">
                 <div class="form__input">
                   <label for="form__name">Name <sup>*</sup></label>
-                  <input type="text" name="name" id="form__name">
+                  <input type="text" name="name" tabindex="1" required id="form__name">
                 </div>
                 <div class="form__input">
                   <label for="form__email">Email address <sup>*</sup></label>
-                  <input type="text" name="mail" id="form__email">
+                  <input type="text" name="mail" tabindex="2" required id="form__email">
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__textarea">
                   <label for="from__message">Message <sup>*</sup></label>
-                  <textarea name="message" id="from__message"></textarea>
+                  <textarea name="message" tabindex="3" required id="from__message"></textarea>
                 </div>
               </div>
               <div class="form__row">
-                <button class="btn btn--submit" type="submit"></button>
+                <button class="btn btn--submit" type="submit">Send</button>
               </div>
             </form>
           </div>

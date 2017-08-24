@@ -132,7 +132,6 @@
                 alt="PC")
           h3.services__item-title Web design
           .services__item-descr The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-  
   section.clients
     .container
       h2.clients__title Some of <b>our clients</b>
@@ -167,7 +166,6 @@
           img(src="img/our-clients-logo/lancome.png", alt="lancome")
         .clients__slider-item
           img(src="img/our-clients-logo/lacoste.png", alt="lacoste")
-        
   section.works#portfolio
     .container
       h2.works__title Take a look at <b>our work</b>
@@ -240,38 +238,37 @@
           .worls__item-action
             h3.works__item-title Trend and fashion
             .works__item-descr  Website design
-
   section.testimonials#testimonials
     .container
       h2.testimonials__title <b>Our clients’</b> testimonials
       .testimonials__slider
         .testimonials__slider-item
           p.testimonials__text This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-          address Dean Martin, CEO Acme Inc.
+          .testimonials__author Dean Martin, <span>CEO Acme Inc.</span>
         .testimonials__slider-item
           p.testimonials__text This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-          address Dean Martin, CEO Acme Inc.
+          .testimonials__author Dean Martin, <span>CEO Acme Inc.</span>
         .testimonials__slider-item
           p.testimonials__text This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-          address Dean Martin, CEO Acme Inc.
+          .testimonials__author Dean Martin, <span>CEO Acme Inc.</span>
   section.contact#contact
     .container
       h2.contact__title Feel free to <b>contact us</b>
-      .contact__descr
+      .contact__descr Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. 
       form(name="contact").form
         .form__row
           .form__input
             label(for="form__name") Name <sup>*</sup>
-            input(type="text" name="name")#form__name
+            input(type="text" name="name" tabindex='1' required)#form__name
           .form__input
             label(for="form__email") Email address <sup>*</sup>
-            input(type="text" name="mail")#form__email
+            input(type="text" name="mail" tabindex='2' required)#form__email
         .form__row
           .form__textarea
             label(for="from__message") Message <sup>*</sup>
-            textarea(name="message")#from__message
+            textarea(name="message" tabindex='3' required)#from__message
         .form__row
-          button(type="submit").btn.btn--submit
+          button(type="submit").btn.btn--submit Send
   footer.page-footer
     .container
       .page-footer__copyright All rights reserved. copyright © 2014 <b>spirit8</b>
