@@ -1,82 +1,3 @@
-.slider {  
-  @media @phone {
-    display: none;
-  }
-  &__item {
-    display: inline-block;
-    padding-top: 119px;
-    position: relative;  
-    height: 600px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: #fff;    
-    .container {
-      display: table;
-      height: 100%;      
-    }
-    @media @tablet {
-      padding-top: 300px;
-      min-height: 300px;      
-    }
-
-    &-title {
-      margin-bottom: 80px;
-      padding: 12px 20px;
-      display: inline-block;
-      font-size: 24px;
-      line-height: 1.1;
-      font-weight: 400;
-      text-transform: uppercase;
-      background: rgba(0,0,0, 0.6);
-    }//title
-
-    &-content {
-      display: table-cell;
-      vertical-align: middle;
-      height: 100%;
-    }//content
-
-    &-text {
-      font-size: 18px;
-      line-height: 1.5;
-    }
-
-    &-descr {
-      margin-bottom: 20px;
-      font-size: 18px;
-      text-transform: uppercase;
-    }
-
-    &-row {
-      text-align: justify;
-      &::after {                 //Важно
-        display: inline-block;   //Важно
-        content: '';             //Важно
-        width: 100%;             //Важно
-        height: 0;               //Важно
-        visibility: hidden;      //Важно
-        overflow: hidden;        //Важно
-      }
-    }//row
-
-    &-list {
-      display: inline-block;
-      vertical-align: top;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      text-align: left;
-      font-size: 18px;
-      text-align-last: auto;
-      &-item {
-        line-height: 1.5;
-      }//list-item
-    }
-  }//item
-}
-
 /*
 *   Custom
 *   Slick-slider style 
@@ -120,7 +41,8 @@
   &-dots {
     position: absolute;
     left: 0;
-    bottom: 20px;
+    bottom: 0;
+    margin: 0;
     width: 100%;
     padding: 0;
     list-style: none;
@@ -146,17 +68,18 @@
       font-size: inherit;
       padding: 0;
       display: block;
-      width: 14px;
-      height: 14px;
-      border: 2px solid #bbb;
-      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      border: none;  
       outline: none;
-      background: transparent;
+      background: #fff;
+      transition: background 0.25s
     }
   }//dots
   &-active {
     button {
-      border-color: #fff;
+      background: @orange;
+      // border-color: #fff;
     }
   }
 }

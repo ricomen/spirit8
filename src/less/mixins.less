@@ -1,8 +1,16 @@
 .heading() {
   position: relative;
-  padding-bottom: 52px;
+  display: inline-block;
+  padding-bottom: 42px;
+  margin-bottom: 42px; 
   font-size: 44px;
   line-height: 1.1;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 300;
+  b {
+    font-weight: 600;
+  }
   &::before, &::after {
     position: absolute;
     content: '';
@@ -11,12 +19,14 @@
   &::before {
     margin-left: -50px;
     width: 100px;
+    height: 4px;
     bottom: 16px;
     background: @orange;
   }
   &::after {
     margin-left: -33px;
     width: 66px;
+    height: 4px;
     bottom: 0;    
     background: #b37b33;
   }
