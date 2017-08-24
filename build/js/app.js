@@ -146,6 +146,39 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
         }
       }]
     });
+
+    /**
+     *  slider our-clients
+     */
+    $('.clients__slider').slick({
+      infinite: true,
+      arrows: false,
+      slidesToShow: 5,
+      slidesToScroll: 5,
+      dots: true,
+      responsive: [{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true
+        }
+      }, {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      }, {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+          arrows: true
+        }
+      }]
+    });
   });
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
