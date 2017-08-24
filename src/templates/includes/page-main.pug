@@ -259,16 +259,19 @@
         .form__row
           .form__input
             label(for="form__name") Name <sup>*</sup>
-            input(type="text" name="name" tabindex='1' required)#form__name
+            input(type="text" name="name" tabindex='1' )#form__name
           .form__input
             label(for="form__email") Email address <sup>*</sup>
-            input(type="text" name="mail" tabindex='2' required)#form__email
+            input(type="text" name="mail" tabindex='2' )#form__email
         .form__row
           .form__textarea
             label(for="from__message") Message <sup>*</sup>
-            textarea(name="message" tabindex='3' required)#from__message
+            textarea(name="message" tabindex='3' )#from__message
         .form__row
           button(type="submit").btn.btn--submit Send
+        .form__message
+          .form__message-text
+  a(href="#home" rel='m_PageScroll2id').btn.btn--toTop Наверх
   footer.page-footer
     .container
       .page-footer__copyright All rights reserved. copyright © 2014 <b>spirit8</b>

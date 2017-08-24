@@ -98,7 +98,7 @@ $(window).on("load", function() {
   });
 
   /**
-   *  sort '.works__list'
+   *  Sort '.works__list'
    */
   let works = document.querySelector('#works__list');  
 
@@ -111,15 +111,102 @@ $(window).on("load", function() {
     }
   });
 
-  /*
-  * menu mobile toggler
-  **/
-
+  /**
+   *  Menu mobile toggler
+   */
   $('.menu__trigger').on('click', function() {
     $(this).toggleClass('menu__trigger--closed');
     $(this).closest('.menu').toggleClass('menu--closed');
   })
+
+   /**
+   *  Form
+   */
   
+  $('form.form').on('submit', function(e) {
+    e.preventDefault();    
+    if(validateForm()) {
+      sendForm($(this));
+    } else {
+      formAlert('Проверьте правильность заполнения формы!');
+    }
+  });
+
+  /**
+   *  Validate form
+   */
+  function validateForm(){
+    let name = $('form.form input[name="name"]').val();
+    let mail = $('form.form input[name="mail"]').val();
+    let message = $('form.form textarea[name="message"]').val();
+
+    if( name!=='' && name!==' ' && message!=='' && message!==' ' && mail!=='' && mail!==' ' && mail.match(/@/)) {
+      return true;
+    } else {      
+      return false;
+    }
+  }
+
+  /**
+   *  Show alert message to form
+   */
+  function formAlert(message) {
+    let alertBox = $('.form__message').fadeIn(100);
+    let alert = $('.form__message-text');
+    alert.html(message);
+    setTimeout(function() {
+      alertBox.fadeOut('500');
+    }, 3000);
+  }  
+
+  /**
+   * @param  {[object]} node [send form by ajax]   
+   */
+  function sendForm(node) {
+    let form = $(node);
+    let message = form.serialize();    
+    $.ajax({
+      type: 'POST',
+      url: 'message.php',
+      data: message,
+      succes: function(data){
+        formAlert('Ваше сообщение отправлено!');
+      },
+      error: function() {
+        formAlert('Не удалось отправить сообщение!');
+      }
+    });
+  }
+
+  /**
+   * Button scroll to top
+   */
+  var t0, scrollTime;
+
+  $('.btn--toTop').hide().on('click', function(event){
+    event.preventDefault();
+    scrollTime = $(document).scrollTop() / 4;
+    $('body').animate({scrollTop:0}, scrollTime);
+  });
+
+  $(window).on('scroll', function(){
+    clearTimeout(t0);
+    t0 = setTimeout(function () {
+        showScrollTopButton();
+        // console.log('scroll');
+      }, 50);
+  });
+
+  showScrollTopButton();
+
+  function showScrollTopButton(){
+    if ( $(document).scrollTop() >= 500 ) {
+      $('.btn--toTop').fadeIn();
+    }
+    else {
+      $('.btn--toTop').fadeOut();
+    }
+  }
 
 });
 
