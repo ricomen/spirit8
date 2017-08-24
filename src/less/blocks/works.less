@@ -1,0 +1,93 @@
+.works {
+  .s-padding;
+  .s-light;
+  text-align: center;
+  &__title {
+    .heading;
+  }//title 
+
+  &__descr {
+    margin-bottom: 80px;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #6c6c6c;
+  }//descr
+
+  &__filter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+    font-size: 18px;
+    line-height: 1.1;
+    text-align: left;
+
+    &-descr {
+      font-weight: 600;
+      text-transform: uppercase;      
+    }//descr
+
+    &-controls {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 0;
+    }//controls
+
+    &-control {
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      margin-right: 14px;
+      padding-right: 16px;      
+      cursor: pointer;
+      color: #6c6c6c;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: 18px;
+      &::after {
+        position: absolute;
+        content: '';
+        right: 0;
+        top: 0;
+        width: 1px;
+        background: #6c6c6c;
+        height: 100%;
+      }
+      &:last-child {
+        padding-right: 0;
+        margin-right: 0;
+
+         &::after {
+          display: none;
+        }
+      }
+      &:hover {
+        color: #ccc;
+      }
+      &.mixitup-control-active {
+        color: #000;
+      }
+    }//item
+  }//filter
+
+  &__list {
+    .row-flex;
+    text-align: left;
+    font-size: 0;
+  }//list
+  &__item {
+    .col;
+    .col-3;
+    .col-sm-6;
+    .col-xs-12;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+    font-size: 14px;    
+    height: 250px;
+    background: #ccc;
+    box-sizing: border-box;
+  }//item
+}

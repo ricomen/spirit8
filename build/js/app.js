@@ -84,6 +84,8 @@ var _mixitup2 = _interopRequireDefault(_mixitup);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 /**
  *  svg
  */
@@ -178,6 +180,44 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
           arrows: true
         }
       }]
+    });
+
+    /**
+     *  slider testimonials
+     */
+    $('.testimonials__slider').slick({
+      infinite: true,
+      arrows: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true
+    });
+
+    /**
+     *  sort '.works__list'
+     */
+
+    var works = document.querySelector('#works__list');
+
+    var mixerConfig = _defineProperty({
+      animation: {
+        enable: false
+      },
+      selectors: {
+        target: '.works__item'
+      }
+    }, 'selectors', {
+      target: '.item'
+    });
+
+    var mixer = (0, _mixitup2.default)(works, {
+      animation: {
+        effects: 'fade scale(0.5)'
+      },
+      selectors: {
+        target: '.works__item'
+      }
+
     });
   });
 })(jQuery);

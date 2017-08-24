@@ -17,7 +17,7 @@
               b Clients - 
               | Satisfied clients thanks to our experience
           .about__button
-            a(href="#portfolio").btn.btn--case Browse our work
+            a(href="#portfolio" rel='m_PageScroll2id').btn.btn--case Browse our work
   section.our-team
     .container
       h2.our-team__title Meet <b>our team</b>
@@ -170,40 +170,93 @@
         
   section.works#portfolio
     .container
-      h2.works__title Take a look at our work
+      h2.works__title Take a look at <b>our work</b>
       .works__descr Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
       .works__filter
         .works__filter-descr Filter by type
-        ul.works__filter-list
-          li.works__filter-item
-            a(href="") All
-          li.works__filter-item
-            a(href="") Web design
-          li.works__filter-item
-            a(href="") Mobile design
-          li.works__filter-item
-            a(href="") Photography
-      .works__layout
-        .works__item
+        .works__filter-controls
+          button(type='button' data-filter='all').works__filter-control All
+          button(type='button' data-filter='.web-design').works__filter-control Web design
+          button(type='button' data-filter='.mobile-design').works__filter-control Mobile design
+          button(type='button' data-filter='.photography').works__filter-control Photography
+      .works__list#works__list
+        .works__item.web-design
           .works__item-content
           .worls__item-action
             h3.works__item-title Trend and fashion
             .works__item-descr  Website design
+        .works__item.web-design
+          .works__item-content
+          .worls__item-action
+            h3.works__item-title Trend and fashion
+            .works__item-descr  Website design
+        .works__item.web-design
+          .works__item-content
+          .worls__item-action
+            h3.works__item-title Trend and fashion
+            .works__item-descr  Website design
+        .works__item.web-design
+          .works__item-content
+          .worls__item-action
+            h3.works__item-title Trend and fashion
+            .works__item-descr  Website design
+        .works__item.mobile-design
+          .works__item-content
+          .worls__item-action
+            h3.works__item-title Trend and fashion
+            .works__item-descr  Website design
+        .works__item.mobile-design
+          .works__item-content
+          .worls__item-action
+            h3.works__item-title Trend and fashion
+            .works__item-descr  Website design
+        .works__item.mobile-design
+          .works__item-content
+          .worls__item-action
+            h3.works__item-title Trend and fashion
+            .works__item-descr  Website design
+        .works__item.mobile-design
+          .works__item-content
+          .worls__item-action
+            h3.works__item-title Trend and fashion
+            .works__item-descr  Website design
+        .works__item.photography
+          .works__item-content
+          .worls__item-action
+            h3.works__item-title Trend and fashion
+            .works__item-descr  Website design
+        .works__item.photography
+          .works__item-content
+          .worls__item-action
+            h3.works__item-title Trend and fashion
+            .works__item-descr  Website design
+        .works__item.photography
+          .works__item-content
+          .worls__item-action
+            h3.works__item-title Trend and fashion
+            .works__item-descr  Website design
+        .works__item.photography
+          .works__item-content
+          .worls__item-action
+            h3.works__item-title Trend and fashion
+            .works__item-descr  Website design
+
   section.testimonials#testimonials
-    h2.testimonials__title Our clients’ testimonials
-    .testimonial__slider
-      .testimonial__slider-item
-        p.testimonials__text This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-        address Dean Martin, CEO Acme Inc.
-      .testimonial__slider-item        
-        p.testimonials__text This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-        address Dean Martin, CEO Acme Inc.
-      .testimonial__slider-item        
-        p.testimonials__text This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-        address Dean Martin, CEO Acme Inc.
+    .container
+      h2.testimonials__title <b>Our clients’</b> testimonials
+      .testimonials__slider
+        .testimonials__slider-item
+          p.testimonials__text This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+          address Dean Martin, CEO Acme Inc.
+        .testimonials__slider-item
+          p.testimonials__text This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+          address Dean Martin, CEO Acme Inc.
+        .testimonials__slider-item
+          p.testimonials__text This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+          address Dean Martin, CEO Acme Inc.
   section.contact#contact
     .container
-      h2.contact__title feel free to contact us
+      h2.contact__title Feel free to <b>contact us</b>
       .contact__descr
       form(name="contact").form
         .form__row

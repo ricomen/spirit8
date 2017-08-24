@@ -1,7 +1,7 @@
 'use strict';
 import           slick from 'slick-carousel'
 import  mPageScroll2id from 'page-scroll-to-id'
-import         mixitup from 'mixitup'
+import         mixitup from 'mixitup';
 
   /**
    *  svg
@@ -90,6 +90,46 @@ $(window).on("load", function() {
     } 
   ]
   });
+
+  /**
+   *  slider testimonials
+   */
+   $('.testimonials__slider').slick({
+    infinite: true,
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true
+  });   
+
+  /**
+   *  sort '.works__list'
+   */
+  
+  let works = document.querySelector('#works__list');  
+
+  const mixerConfig = {
+      animation: {
+          enable: false
+      },
+      selectors: {
+        target: '.works__item'
+      },
+      selectors: {
+          target: '.item'
+      }
+  };
+
+  let mixer = mixitup(works, {
+    animation: {
+        effects: 'fade scale(0.5)'
+    },
+    selectors: {
+      target: '.works__item'
+    }
+
+  });
+  
 
 });
 

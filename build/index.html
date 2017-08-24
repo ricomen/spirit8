@@ -47,7 +47,7 @@
                   <li><b>Skills - </b>Delivering fast and excellent results</li>
                   <li><b>Clients - </b>Satisfied clients thanks to our experience</li>
                 </ul>
-                <div class="about__button"><a class="btn btn--case" href="#portfolio">Browse our work</a></div>
+                <div class="about__button"><a class="btn btn--case" href="#portfolio" rel="m_PageScroll2id">Browse our work</a></div>
               </div>
             </div>
           </div>
@@ -183,19 +183,96 @@
         </section>
         <section class="works" id="portfolio">
           <div class="container">
-            <h2 class="works__title">Take a look at our work</h2>
+            <h2 class="works__title">Take a look at <b>our work</b></h2>
             <div class="works__descr">Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</div>
             <div class="works__filter">
               <div class="works__filter-descr">Filter by type</div>
-              <ul class="works__filter-list">
-                <li class="works__filter-item"><a href="">All</a></li>
-                <li class="works__filter-item"><a href="">Web design</a></li>
-                <li class="works__filter-item"><a href="">Mobile design</a></li>
-                <li class="works__filter-item"><a href="">Photography</a></li>
-              </ul>
+              <div class="works__filter-controls">
+                <button class="works__filter-control" type="button" data-filter="all">All</button>
+                <button class="works__filter-control" type="button" data-filter=".web-design">Web design</button>
+                <button class="works__filter-control" type="button" data-filter=".mobile-design">Mobile design</button>
+                <button class="works__filter-control" type="button" data-filter=".photography">Photography</button>
+              </div>
             </div>
-            <div class="works__layout">
-              <div class="works__item">
+            <div class="works__list" id="works__list">
+              <div class="works__item web-design">
+                <div class="works__item-content"></div>
+                <div class="worls__item-action">
+                  <h3 class="works__item-title">Trend and fashion</h3>
+                  <div class="works__item-descr"> Website design</div>
+                </div>
+              </div>
+              <div class="works__item web-design">
+                <div class="works__item-content"></div>
+                <div class="worls__item-action">
+                  <h3 class="works__item-title">Trend and fashion</h3>
+                  <div class="works__item-descr"> Website design</div>
+                </div>
+              </div>
+              <div class="works__item web-design">
+                <div class="works__item-content"></div>
+                <div class="worls__item-action">
+                  <h3 class="works__item-title">Trend and fashion</h3>
+                  <div class="works__item-descr"> Website design</div>
+                </div>
+              </div>
+              <div class="works__item web-design">
+                <div class="works__item-content"></div>
+                <div class="worls__item-action">
+                  <h3 class="works__item-title">Trend and fashion</h3>
+                  <div class="works__item-descr"> Website design</div>
+                </div>
+              </div>
+              <div class="works__item mobile-design">
+                <div class="works__item-content"></div>
+                <div class="worls__item-action">
+                  <h3 class="works__item-title">Trend and fashion</h3>
+                  <div class="works__item-descr"> Website design</div>
+                </div>
+              </div>
+              <div class="works__item mobile-design">
+                <div class="works__item-content"></div>
+                <div class="worls__item-action">
+                  <h3 class="works__item-title">Trend and fashion</h3>
+                  <div class="works__item-descr"> Website design</div>
+                </div>
+              </div>
+              <div class="works__item mobile-design">
+                <div class="works__item-content"></div>
+                <div class="worls__item-action">
+                  <h3 class="works__item-title">Trend and fashion</h3>
+                  <div class="works__item-descr"> Website design</div>
+                </div>
+              </div>
+              <div class="works__item mobile-design">
+                <div class="works__item-content"></div>
+                <div class="worls__item-action">
+                  <h3 class="works__item-title">Trend and fashion</h3>
+                  <div class="works__item-descr"> Website design</div>
+                </div>
+              </div>
+              <div class="works__item photography">
+                <div class="works__item-content"></div>
+                <div class="worls__item-action">
+                  <h3 class="works__item-title">Trend and fashion</h3>
+                  <div class="works__item-descr"> Website design</div>
+                </div>
+              </div>
+              <div class="works__item photography">
+                <div class="works__item-content"></div>
+                <div class="worls__item-action">
+                  <h3 class="works__item-title">Trend and fashion</h3>
+                  <div class="works__item-descr"> Website design</div>
+                </div>
+              </div>
+              <div class="works__item photography">
+                <div class="works__item-content"></div>
+                <div class="worls__item-action">
+                  <h3 class="works__item-title">Trend and fashion</h3>
+                  <div class="works__item-descr"> Website design</div>
+                </div>
+              </div>
+              <div class="works__item photography">
                 <div class="works__item-content"></div>
                 <div class="worls__item-action">
                   <h3 class="works__item-title">Trend and fashion</h3>
@@ -206,25 +283,27 @@
           </div>
         </section>
         <section class="testimonials" id="testimonials">
-          <h2 class="testimonials__title">Our clients’ testimonials</h2>
-          <div class="testimonial__slider">
-            <div class="testimonial__slider-item">
-              <p class="testimonials__text">This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-              <address>Dean Martin, CEO Acme Inc.</address>
-            </div>
-            <div class="testimonial__slider-item">       
-              <p class="testimonials__text">This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-              <address>Dean Martin, CEO Acme Inc.</address>
-            </div>
-            <div class="testimonial__slider-item">       
-              <p class="testimonials__text">This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-              <address>Dean Martin, CEO Acme Inc.</address>
+          <div class="container">
+            <h2 class="testimonials__title"><b>Our clients’</b> testimonials</h2>
+            <div class="testimonials__slider">
+              <div class="testimonials__slider-item">
+                <p class="testimonials__text">This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                <address>Dean Martin, CEO Acme Inc.</address>
+              </div>
+              <div class="testimonials__slider-item">
+                <p class="testimonials__text">This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                <address>Dean Martin, CEO Acme Inc.</address>
+              </div>
+              <div class="testimonials__slider-item">
+                <p class="testimonials__text">This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                <address>Dean Martin, CEO Acme Inc.</address>
+              </div>
             </div>
           </div>
         </section>
         <section class="contact" id="contact">
           <div class="container">
-            <h2 class="contact__title">feel free to contact us</h2>
+            <h2 class="contact__title">Feel free to <b>contact us</b></h2>
             <div class="contact__descr"></div>
             <form class="form" name="contact">
               <div class="form__row">
